@@ -1,0 +1,17 @@
+
+1、ELF文件加载流程
+    1、按照程序头进行加载
+    2、获取init array 段
+    3、解析动态符号表，SHT_DYNSYM以及SHT_SYMTAB。主要是SHT_DYNSYM的加载
+    4、进行.rel.dyn节以及.rel.plt节的重定位
+
+1、ELF文件动态加载
+    .rel.dyn节的每个表项对应了除了外部过程调用的符号以外的所有重定位对象，
+    而.rel.plt节的每个表项对应了所有外部过程调用符号的重定位信息。
+
+    例如你的程序中需要调用一个libc中的函数，假如是strlen，直接调用的话，这个strlen符号就会在.rel.plt节中，
+    如果在你的程序中定义一个函数指针(假如是my_strlen)指向strlen函数，那么my_strlen符号就会在.rel.dyn节中。
+
+    .rel.dyn和.rel.plt节中每个重定位项记录了符号的符号表索引，重定位的操作地址，重定位类型的信息，
+
+    .rel.plt中的类型应该都是R_ARM_JUMP_SLOT。

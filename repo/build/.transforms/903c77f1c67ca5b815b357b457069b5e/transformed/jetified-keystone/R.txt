@@ -1,0 +1,1 @@
+int string jna_library_appname 0x0

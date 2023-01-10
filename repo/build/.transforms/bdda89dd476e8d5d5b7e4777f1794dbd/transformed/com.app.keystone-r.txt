@@ -1,0 +1,2 @@
+com.app.keystone
+string jna_library_appname

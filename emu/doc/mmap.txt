@@ -1,0 +1,56 @@
+/*
+        void *mmap2(void *addr, size_t length, int prot, int flags, int fd, off_t pgoffset);
+        # MAP_FILE	    0
+        # MAP_SHARED	0x01
+        # MAP_PRIVATE	0x02
+        # MAP_FIXED	    0x10
+        # MAP_ANONYMOUS	0x20
+
+    flag
+    #define PROT_READ 0x1
+22  #define PROT_WRITE 0x2
+23  #define PROT_EXEC 0x4
+24  #define PROT_SEM 0x8
+25  #define PROT_NONE 0x0
+26  #define PROT_GROWSDOWN 0x01000000
+27  #define PROT_GROWSUP 0x02000000
+28  #define MAP_TYPE 0x0f
+29  #define MAP_FIXED 0x10
+30  #define MAP_ANONYMOUS 0x20
+31  #define MAP_POPULATE 0x008000
+32  #define MAP_NONBLOCK 0x010000
+33  #define MAP_STACK 0x020000
+34  #define MAP_HUGETLB 0x040000
+35  #define MAP_SYNC 0x080000
+36  #define MAP_FIXED_NOREPLACE 0x100000
+37  #define MAP_UNINITIALIZED 0x4000000
+38  #define MLOCK_ONFAULT 0x01
+39  #define MS_ASYNC 1
+40  #define MS_INVALIDATE 2
+41  #define MS_SYNC 4
+42  #define MADV_NORMAL 0
+43  #define MADV_RANDOM 1
+44  #define MADV_SEQUENTIAL 2
+45  #define MADV_WILLNEED 3
+46  #define MADV_DONTNEED 4
+47  #define MADV_FREE 8
+48  #define MADV_REMOVE 9
+49  #define MADV_DONTFORK 10
+50  #define MADV_DOFORK 11
+51  #define MADV_HWPOISON 100
+52  #define MADV_SOFT_OFFLINE 101
+53  #define MADV_MERGEABLE 12
+54  #define MADV_UNMERGEABLE 13
+55  #define MADV_HUGEPAGE 14
+56  #define MADV_NOHUGEPAGE 15
+57  #define MADV_DONTDUMP 16
+58  #define MADV_DODUMP 17
+59  #define MADV_WIPEONFORK 18
+60  #define MADV_KEEPONFORK 19
+61  #define MADV_COLD 20
+62  #define MADV_PAGEOUT 21
+63  #define MAP_FILE 0
+64  #define PKEY_DISABLE_ACCESS 0x1
+65  #define PKEY_DISABLE_WRITE 0x2
+66  #define PKEY_ACCESS_MASK (PKEY_DISABLE_ACCESS | PKEY_DISABLE_WRITE)
+* */
